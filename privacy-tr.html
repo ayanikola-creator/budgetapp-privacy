@@ -1,334 +1,137 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gizlilik Politikasi — Butce Uzmani</title>
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: #f5f7fa;
-    color: #1a1a1a;
-    line-height: 1.7;
-    padding: 40px 20px;
-  }
-  .container {
-    max-width: 760px;
-    margin: 0 auto;
-    background: #ffffff;
-    padding: 48px 40px;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(13, 138, 107, 0.08);
-  }
-  .header {
-    border-bottom: 2px solid #e6f7f0;
-    padding-bottom: 24px;
-    margin-bottom: 32px;
-  }
-  .lang-switch {
-    display: inline-block;
-    margin-bottom: 20px;
-    font-size: 13px;
-    color: #0d8a6b;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  .lang-switch:hover { text-decoration: underline; }
-  h1 {
-    font-size: 28px;
-    font-weight: 800;
-    color: #0d8a6b;
-    letter-spacing: -0.5px;
-    margin-bottom: 8px;
-  }
-  .subtitle {
-    font-size: 14px;
-    color: #6b7785;
-    font-weight: 500;
-  }
-  .updated {
-    font-size: 13px;
-    color: #8a93a0;
-    margin-top: 8px;
-  }
-  h2 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #0a6e55;
-    margin-top: 32px;
-    margin-bottom: 12px;
-    padding-left: 12px;
-    border-left: 3px solid #14b88a;
-  }
-  h3 {
-    font-size: 15px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-top: 20px;
-    margin-bottom: 8px;
-  }
-  p {
-    font-size: 15px;
-    color: #3a4553;
-    margin-bottom: 14px;
-  }
-  ul {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 14px;
-  }
-  ul li {
-    font-size: 15px;
-    color: #3a4553;
-    padding: 6px 0 6px 24px;
-    position: relative;
-  }
-  ul li::before {
-    content: '•';
-    color: #14b88a;
-    font-weight: 800;
-    position: absolute;
-    left: 8px;
-    font-size: 18px;
-  }
-  strong {
-    color: #0d8a6b;
-    font-weight: 700;
-  }
-  a {
-    color: #0d8a6b;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  a:hover { text-decoration: underline; }
-  .highlight {
-    background: #e6f7f0;
-    border-left: 3px solid #14b88a;
-    padding: 16px 20px;
-    border-radius: 8px;
-    margin: 20px 0;
-    font-size: 14px;
-  }
-  .contact-box {
-    background: #f9fafb;
-    border: 1px solid #e6f7f0;
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin: 16px 0;
-  }
-  .contact-box p {
-    margin-bottom: 8px;
-  }
-  .contact-box p:last-child {
-    margin-bottom: 0;
-  }
-  .footer {
-    margin-top: 48px;
-    padding-top: 24px;
-    border-top: 1px solid #eef0f3;
-    text-align: center;
-    font-size: 13px;
-    color: #8a93a0;
-  }
-  @media (max-width: 600px) {
-    body { padding: 20px 12px; }
-    .container { padding: 32px 24px; }
-    h1 { font-size: 24px; }
-    h2 { font-size: 16px; }
-    p, ul li { font-size: 14px; }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gizlilik Politikası – Bütçe Uzmanı</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    header {
+      background: linear-gradient(135deg, #065F57, #0D9488, #00E5CC);
+      color: #fff;
+      padding: 40px 24px;
+      text-align: center;
+    }
+    header h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+    header p  { font-size: 15px; opacity: 0.85; }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 13px;
+      margin-top: 12px;
+    }
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #0F766E;
+      margin: 32px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #CCFBF1;
+    }
+    p, li { font-size: 15px; color: #374151; margin-bottom: 10px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      border: 1px solid #e5e7eb;
+    }
+    .highlight {
+      background: #F0FDFA;
+      border-left: 4px solid #00E5CC;
+      padding: 14px 18px;
+      border-radius: 0 12px 12px 0;
+      margin: 16px 0;
+      font-size: 14px;
+      color: #0F766E;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+    a { color: #0D9488; }
+  </style>
 </head>
 <body>
+
+<header>
+  <h1>Gizlilik Politikası</h1>
+  <p>Bütçe Uzmanı – Kişisel Finans Uygulaması</p>
+  <span class="badge">Son güncelleme: Nisan 2026</span>
+</header>
+
 <div class="container">
 
-<div class="header">
-  <a href="privacy-en.html" class="lang-switch">English Version &rarr;</a>
-  <h1>Gizlilik Politikasi</h1>
-  <div class="subtitle">Butce Uzmani Mobil Uygulamasi</div>
-  <div class="updated">Son guncelleme: 9 Nisan 2026</div>
-</div>
+  <div class="card">
+    <div class="highlight">
+      Verilerinize saygı duyuyoruz. Bu politika, Bütçe Uzmanı uygulamasının hangi verileri topladığını, nasıl kullandığını ve nasıl koruduğunu açıklar.
+    </div>
 
-<p>Bu Gizlilik Politikasi, <strong>Butce Uzmani</strong> mobil uygulamasinin ("Uygulama") kisisel verilerinizi nasil topladigini, kullandigini ve korudugunu aciklar. Uygulamayi kullanarak bu politikayi kabul etmis sayilirsiniz.</p>
+    <h2>1. Toplanan Veriler</h2>
+    <p>Uygulama aşağıdaki verileri toplar ve işler:</p>
+    <ul>
+      <li>Hesap bilgileri (e-posta adresi, görünen ad) — Google, Apple veya e-posta ile giriş yapıldığında</li>
+      <li>Harcama ve gelir kayıtları (kategori, tutar, tarih)</li>
+      <li>Bütçe hedefleri ve kategori limitleri</li>
+      <li>Uygulama tercihleri (para birimi, bildirim ayarları)</li>
+    </ul>
 
-<div class="highlight">
-<strong>Ozet:</strong> Finansal verileriniz yalnizca size aittir. Verilerinizi satmayiz, pazarlama icin ucuncu taraflarla paylasmayiz. Hesabinizi istediginiz zaman uygulama icinden silebilirsiniz. Ucretsiz surumde ileride reklam gosterilebilir; Premium surumde hicbir reklam gorunmez.
-</div>
+    <h2>2. Verilerin Kullanım Amacı</h2>
+    <p>Toplanan veriler yalnızca şu amaçlarla kullanılır:</p>
+    <ul>
+      <li>Finansal takip ve raporlama özelliklerinin sağlanması</li>
+      <li>Cihazlar arası veri senkronizasyonu</li>
+      <li>Kullanıcıya özel bildirimler ve öneriler</li>
+    </ul>
+    <p><strong>Verileriniz hiçbir şekilde reklam, profilleme veya analiz amacıyla kullanılmaz.</strong></p>
 
-<h2>1. Uygulama Sahibi</h2>
-<p>
-Butce Uzmani, <strong>Hakan Doner</strong> tarafindan bagimsiz olarak gelistirilen ve isletilen bir kisisel finans uygulamasidir.
-</p>
+    <h2>3. Veri Depolama ve Güvenlik</h2>
+    <p>Tüm veriler Google Firebase altyapısında, endüstri standardı şifreleme ile saklanır. Firebase, SOC 2 Type II ve ISO 27001 sertifikasına sahiptir.</p>
+    <p>Uygulama içi PIN SHA-256 algoritması ile hash'lenerek cihazınızda saklanır. Biyometrik veriler yalnızca cihazınızda tutulur. Hiçbir güvenlik verisi sunucuya gönderilmez.</p>
 
-<div class="contact-box">
-<p><strong>Iletisim E-posta:</strong> <a href="mailto:butceuzmani.feedback@gmail.com">butceuzmani.feedback@gmail.com</a></p>
-<p><strong>Gelistirici:</strong> Hakan Doner</p>
-</div>
+    <h2>4. Üçüncü Taraf Paylaşımı</h2>
+    <p>Verileriniz, yasal bir yükümlülük bulunmadıkça hiçbir üçüncü tarafla paylaşılmaz, satılmaz veya kiralanmaz.</p>
+    <p>Kullanılan üçüncü taraf hizmetleri:</p>
+    <ul>
+      <li><strong>Google Firebase</strong> — veri depolama ve kimlik doğrulama</li>
+      <li><strong>Google Sign-In / Apple Sign-In</strong> — opsiyonel giriş yöntemleri</li>
+    </ul>
 
-<h2>2. Topladigimiz Veriler</h2>
+    <h2>5. Veri Silme Hakkı</h2>
+    <p>Profil &gt; Güvenlik ve Veri &gt; Hesabı Sil seçeneği ile hesabınızı ve tüm verilerinizi kalıcı olarak silebilirsiniz. Bu işlem geri alınamaz.</p>
 
-<h3>2.1 Hesap Bilgileri</h3>
-<ul>
-<li>E-posta adresi (Google veya Apple ile giris yaptiginizda)</li>
-<li>Gorunen ad</li>
-<li>Hesap olusturma tarihi</li>
-<li>Kullandiginiz cihaz platformu (Android / iOS)</li>
-</ul>
+    <h2>6. Çocukların Gizliliği</h2>
+    <p>Uygulama 13 yaş altı kullanıcılara yönelik değildir ve bu yaş grubundan bilerek veri toplanmaz.</p>
 
-<h3>2.2 Finansal Veriler</h3>
-<p>Uygulamanin temel islevi icin asagidaki verileri siz girersiniz:</p>
-<ul>
-<li>Gelir ve gider kayitlari (tutar, kategori, tarih, aciklama)</li>
-<li>Varlik kayitlari (nakit, doviz, altin, gumus, kripto, borsa)</li>
-<li>Aylik butce limitleri ve kategori bazli hedefler</li>
-<li>Tasarruf hedefleri</li>
-<li>Sabit aylik giderler</li>
-<li>Kendi olusturdugunuz ozel kategoriler ve alt kategoriler</li>
-</ul>
+    <h2>7. Politika Güncellemeleri</h2>
+    <p>Bu politika zaman zaman güncellenebilir. Önemli değişikliklerde uygulama içi bildirim gönderilir. Güncel politikaya her zaman bu sayfadan ulaşabilirsiniz.</p>
 
-<h3>2.3 Uygulama Kullanim Verileri</h3>
-<ul>
-<li>Gunluk giris serisi (streak)</li>
-<li>Bildirim tercihleri</li>
-<li>Push bildirim token'i (sadece bildirim gondermek icin)</li>
-</ul>
+    <h2>8. İletişim</h2>
+    <p>Gizlilikle ilgili sorularınız için uygulama içindeki Geri Bildirim ekranından veya aşağıdaki e-posta adresi üzerinden bize ulaşabilirsiniz:</p>
+    <p><a href="mailto:butceuzmani.feedback@gmail.com">butceuzmani.feedback@gmail.com</a></p>
+  </div>
 
-<h3>2.4 Reklam Kimligi (Ileride Eklenecek)</h3>
-<p>
-Ileri surumlerde ucretsiz kullanicilar icin reklam gosterimi eklenecektir. Bu ozellik aktif oldugunda, Google AdMob size daha uygun reklamlar gosterebilmek icin cihazinizin <strong>Reklam Kimligi (Advertising ID)</strong> ve temel cihaz bilgilerini (cihaz modeli, isletim sistemi surumu, yaklasik konum ulkesi) toplayabilir. Premium kullanicilara hicbir reklam gosterilmez ve reklam kimligi toplanmaz.
-</p>
-
-<div class="highlight">
-Uygulama <strong>analiz, davranis takibi veya cerez</strong> kullanmamaktadir. Kullanici davranisinizi izlemiyoruz.
-</div>
-
-<h2>3. Verileri Nasil Kullaniyoruz?</h2>
-<p>Topladigimiz veriler yalnizca su amaclarla kullanilir:</p>
-<ul>
-<li>Uygulamanin temel islevlerini saglamak (harcama takibi, raporlar, butce yonetimi)</li>
-<li>Verilerinizi birden fazla cihaz arasinda senkronize etmek</li>
-<li>Bildirim gondermek (yalnizca siz izin verdiyseniz)</li>
-<li>Teknik sorunlari gidermek</li>
-<li>Ileride ucretsiz surumde reklam gosterimi (yalnizca ucretsiz kullanicilar icin)</li>
-</ul>
-<p>
-Finansal verilerinizi <strong>asla</strong> satmayiz, reklam amaciyla kullanmayiz, pazarlama amaciyla ucuncu taraflarla paylasmayiz. Reklam servisimiz yalnizca cihaz duzeyinde reklam kimligi kullanir, finansal verilerinize erismez.
-</p>
-
-<h2>4. Veri Saklama ve Guvenlik</h2>
-
-<h3>4.1 Nerede Saklaniyor?</h3>
-<p>
-Finansal verileriniz <strong>Google Firebase</strong> (Firestore) altyapisinda sifrelenerek saklanir. Sunucular, Google'in Avrupa veri merkezlerinde (Belcika) yer alir.
-</p>
-
-<h3>4.2 Kimler Erisebilir?</h3>
-<ul>
-<li>Yalnizca <strong>siz</strong> - Firestore guvenlik kurallari, yalnizca kendi hesabinizin verisine erismenize izin verir</li>
-<li>Yasal zorunluluk olmadikca hicbir calisan verilerinize bakmaz</li>
-</ul>
-
-<h3>4.3 Cihazinizda Tutulan Veriler</h3>
-<p>
-Bazi veriler performans icin yalnizca cihazinizda saklanir ve sunucuya gonderilmez:
-</p>
-<ul>
-<li>Duzenli odeme hatirlaticilari</li>
-<li>Doviz kuru onbellegi (1 saat)</li>
-<li>Kripto fiyat onbellegi (5 dakika)</li>
-<li>Biyometrik kimlik dogrulama (Face ID / parmak izi - cihazinizdan cikmaz)</li>
-</ul>
-
-<h2>5. Ucuncu Taraf Servisler</h2>
-<p>Uygulama asagidaki ucuncu taraf servisleri kullanir:</p>
-
-<h3>5.1 Firebase (Google LLC)</h3>
-<p>
-Kimlik dogrulama ve veritabani icin kullanilir. Google'in gizlilik politikasi: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
-</p>
-
-<h3>5.2 Google Sign-In / Apple Sign-In</h3>
-<p>
-Hesap olusturmak ve giris yapmak icin kullanilir. Bu servisler araciligiyla yalnizca e-posta adresiniz ve gorunen adiniz alinir.
-</p>
-
-<h3>5.3 EmailJS</h3>
-<p>
-Uygulama icinden geri bildirim gonderdiginizde, mesajiniz EmailJS araciligiyla iletilir. <strong>Finansal verileriniz bu servisten gecmez</strong>, yalnizca gonderdiginiz mesaj metni ve iletisim bilgileriniz iletilir.
-</p>
-
-<h3>5.4 TCMB (Turkiye Cumhuriyet Merkez Bankasi)</h3>
-<p>
-Guncel doviz kurlarini almak icin TCMB'nin kamuya acik API'si kullanilir. Bu servise hicbir kisisel veri gonderilmez.
-</p>
-
-<h3>5.5 CoinGecko</h3>
-<p>
-Guncel kripto para fiyatlarini almak icin CoinGecko'nun kamuya acik API'si kullanilir. Bu servise hicbir kisisel veri gonderilmez.
-</p>
-
-<h3>5.6 Google AdMob (Ileride Eklenecek)</h3>
-<p>
-Gelecek surumlerde ucretsiz kullanicilara reklam gostermek icin Google AdMob kullanilacaktir. AdMob, size ilgili reklamlar gosterebilmek icin cihazinizin Reklam Kimligi (Advertising ID), IP adresi ve temel cihaz bilgilerini toplayabilir. Banner reklamlar ve istege bagli odullu video reklamlar gosterilecektir.
-</p>
-<p>
-Premium surume gecerek reklamlari tamamen kapatabilirsiniz. Ayrica cihaz ayarlarinizdan Reklam Kimliginizi sifirlayabilir veya kisisellestirilmis reklamlari kapatabilirsiniz.
-</p>
-<p>
-AdMob gizlilik politikasi: <a href="https://policies.google.com/technologies/ads" target="_blank">policies.google.com/technologies/ads</a>
-</p>
-
-<h2>6. Haklariniz</h2>
-<p>KVKK ve GDPR kapsaminda asagidaki haklara sahipsiniz:</p>
-<ul>
-<li><strong>Erisim hakki:</strong> Hangi verilerinizin saklandigini ogrenme</li>
-<li><strong>Duzeltme hakki:</strong> Yanlis veya eksik verilerin duzeltilmesini isteme</li>
-<li><strong>Silme hakki:</strong> Verilerinizin silinmesini isteme</li>
-<li><strong>Veri tasinabilirligi:</strong> Verilerinizin bir kopyasini alma</li>
-<li><strong>Itiraz hakki:</strong> Veri islemeye itiraz etme</li>
-</ul>
-
-<h2>7. Hesap ve Veri Silme</h2>
-<p>
-Hesabinizi istediginiz zaman uygulama icinden silebilirsiniz:
-</p>
-<ul>
-<li>Profil ekranina gidin</li>
-<li>"Hesabi Sil" secenegine tiklayin</li>
-<li>Onaylayin</li>
-</ul>
-<p>
-Hesap silindiginde, tum finansal verileriniz (gelirler, giderler, varliklar, kategoriler) Firestore'dan <strong>aninda</strong> silinir. Firebase'in otomatik yedekleme sisteminde kisa sureli olarak kalabilir, ancak bu yedekler Google'in politikasi geregi belirli bir sure sonra kalici olarak silinir.
-</p>
-<p>
-Herhangi bir sorun yasarsaniz, silme talebinizi asagidaki iletisim adresine de gonderebilirsiniz.
-</p>
-
-<h2>8. Cocuklarin Gizliligi</h2>
-<p>
-Butce Uzmani <strong>13 yas ve uzeri</strong> kullanicilar icin tasarlanmistir. 13 yasindan kucuk cocuklardan bilerek veri toplamayiz. Eger 13 yasindan kucuk bir kullanicinin hesabi oldugunu fark edersek, ilgili hesabi ve verileri sileriz.
-</p>
-
-<h2>9. Degisiklikler</h2>
-<p>
-Bu Gizlilik Politikasi zaman zaman guncellenebilir. Onemli degisiklikler oldugunda, uygulama icinden sizi bilgilendirecegiz. En guncel surum her zaman bu sayfada bulunacaktir.
-</p>
-
-<h2>10. Iletisim</h2>
-<p>
-Gizlilik politikasi hakkinda sorulariniz, endiseleriniz veya talepleriniz icin lutfen bizimle iletisime gecin. Silme talepleri, veri erisim istekleri ve diger tum konular icin asagidaki e-posta adresini kullanabilirsiniz.
-</p>
-
-<div class="contact-box">
-<p><strong>E-posta:</strong> <a href="mailto:butceuzmani.feedback@gmail.com">butceuzmani.feedback@gmail.com</a></p>
-<p><strong>Gelistirici:</strong> Hakan Doner</p>
-<p><strong>Yanit suresi:</strong> Genellikle 3 is gunu icinde yanit veriyoruz.</p>
-</div>
-
-<div class="footer">
-&copy; 2026 Butce Uzmani &middot; Hakan Doner &middot; Tum haklari saklidir
-</div>
+  <div class="footer">
+    <p>© 2026 Bütçe Uzmanı. Tüm hakları saklıdır.</p>
+  </div>
 
 </div>
 </body>
